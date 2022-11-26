@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@700&display=swap");
+
+.header {
+  height: 230px;
+  text-align: center;
+}
+.separator {
+  height: 20px;
+  border-style: solid;
+  border-width: 4px 0 4px 0;
+}
+
+.title {
+  font-size: 96px;
+  font-family: "Bebas Neue", cursive;
+}
+.midSeparator {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+}
+.cart {
+  height: 40px;
+}
