@@ -6,28 +6,41 @@ import Loading from "./Helper/Loading";
 import ProductItem from "./ProductItem";
 import styles from "./ProductContainer.module.css";
 
-const ProductContainer = () => {
+const ProductContainer = ({ search }) => {
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
     async function fetchProducts() {
       const { url, options } = PRODUCT_GET(20);
-      const { response, json } = await request(url, options);
+      await request(url, options);
     }
     fetchProducts();
   }, [request]);
-  console.log(data);
 
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
   if (data)
     return (
       <div className={`${styles.productContainer} container`}>
-        {data.map((product) => (
-          <ProductItem product={product} />
-        ))}
+        {data
+          .filter((product) =>
+            product.title.toLowerCase().includes(search.name.toLowerCase())
+          )
+          .filter((product) =>
+            search.minPrice > 0 ? product.price > search.minPrice : true
+          )
+          .filter((product) =>
+            search.maxPrice > 0 ? product.price < search.maxPrice : true
+          )
+          .map((product) => (
+            <ProductItem key={product.id} product={product} />
+          ))}
       </div>
     );
 };
 
 export default ProductContainer;
+
+// {data.map((product) => (
+//   <ProductItem key={product.id} product={product} />
+// ))}

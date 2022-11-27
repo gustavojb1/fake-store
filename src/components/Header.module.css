@@ -3,6 +3,7 @@
 .header {
   height: 230px;
   text-align: center;
+  position: relative;
 }
 .separator {
   height: 20px;
@@ -24,5 +25,22 @@
   font-family: "Poppins", sans-serif;
 }
 .cart {
-  height: 40px;
+  height: 35px;
+}
+.cartItens {
+  position: absolute;
+  max-height: 0;
+  width: 500px;
+  background-color: white;
+  right: 0;
+  top: 198px;
+  transition: all 0.5s ease-out;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+}
+.show {
+  border: 2px solid black;
+  max-height: 500px;
+  transition: all 0.5s ease-in;
+  overflow-y: auto;
 }
