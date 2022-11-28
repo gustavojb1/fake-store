@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProductItem.module.css";
 import { UserContext } from "./UserContext";
 
 function ProductItem({ product }) {
   const { cartItem, setCartItem } = React.useContext(UserContext);
+  const [disable, setDisable] = React.useState(false);
+
+  useEffect(() => {
+    if (cartItem.filter((e) => e.id === product.id).length > 0) {
+      setDisable(true);
+    } else {
+      setDisable(false);
+    }
+  }, [cartItem, product]);
 
   function handleClickAddCart() {
     const newProduct = { ...product, qt: 1 };
@@ -37,9 +46,15 @@ function ProductItem({ product }) {
         </div>
       </Link>
       <div className={styles.comprar1}>
-        <button onClick={handleClickAddCart} className={styles.comprar}>
-          Adicionar ao carrinho
-        </button>
+        {disable ? (
+          <button disabled className={styles.comprar}>
+            Item ja adicionado
+          </button>
+        ) : (
+          <button onClick={handleClickAddCart} className={styles.comprar}>
+            Adicionar ao carrinho
+          </button>
+        )}
       </div>
     </div>
   );
