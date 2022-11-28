@@ -6,3 +6,13 @@ export function PRODUCT_GET(limit) {
     },
   };
 }
+
+export function ITEM_GET({ id }) {
+  return {
+    url: `https://fakestoreapi.com/products/${id}`,
+    options: {
+      method: "GET",
+      responseType: "text",
+    },
+  };
+}

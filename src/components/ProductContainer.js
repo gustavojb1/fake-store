@@ -5,13 +5,14 @@ import Error from "./Helper/Error";
 import Loading from "./Helper/Loading";
 import ProductItem from "./ProductItem";
 import styles from "./ProductContainer.module.css";
+import { Link } from "react-router-dom";
 
 const ProductContainer = ({ search }) => {
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
     async function fetchProducts() {
-      const { url, options } = PRODUCT_GET(20);
+      const { url, options } = PRODUCT_GET(100);
       await request(url, options);
     }
     fetchProducts();

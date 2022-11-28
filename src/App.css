@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Poppins:wght@700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -12,4 +13,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   background-color: #f7f7f7;
+}
+a {
+  text-decoration: none;
+  color: black;
 }

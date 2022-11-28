@@ -58,3 +58,25 @@
   justify-content: center;
   align-items: center;
 }
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}
+.total {
+  width: 100%;
+  border-top: 1px solid black;
+  display: flex;
+  padding-left: 30px;
+  column-gap: 20px;
+  align-items: center;
+  height: 70px;
+  font-size: 1.2rem;
+}
+.total button {
+  font-family: "Poppins", sans-serif;
+  width: 150px;
+  height: 40px;
+  margin-left: 50px;
+}

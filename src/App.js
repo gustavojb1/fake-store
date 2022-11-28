@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import ConfirmPurchase from "./components/ConfirmPurchase";
 import { UserStorage } from "./components/UserContext";
+import Login from "./components/Login";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/" element={<ConfirmPurchase />} />
+            <Route path="confirm" element={<ConfirmPurchase />} />
+            <Route path="product/:id" element={<ProductDetails />} />
+            <Route path="login" element={<Login />} />
           </Routes>
           <Footer />
         </UserStorage>

@@ -1,0 +1,63 @@
+.confirm {
+  min-height: 80vh;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.itens {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.3rem;
+}
+.sectionItem {
+  display: flex;
+  height: 150px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  overflow-y: hidden;
+  border-bottom: 2px solid black;
+}
+.titleItem {
+  flex: 1.5;
+  font-size: 0.9rem;
+  padding: 0 30px;
+}
+.image {
+  flex: 0.7;
+}
+.image img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.description {
+  flex: 6;
+  font-size: 0.8rem;
+  padding: 0 20px;
+}
+.total {
+  flex: 1;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.priceTotal {
+  background-color: greenyellow;
+  width: 80px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

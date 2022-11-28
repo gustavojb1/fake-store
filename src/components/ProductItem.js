@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./ProductItem.module.css";
 import { UserContext } from "./UserContext";
 
@@ -22,22 +23,24 @@ function ProductItem({ product }) {
     } else {
       setCartItem([...cartItem, newProduct]);
     }
-
-    console.log(cartItem);
   }
 
   return (
     <div className={styles.product}>
-      <div className={styles.image}>
-        <img src={product.image} alt={product.title} />
-      </div>
-      <div className={styles.details}>
-        <div style={{ color: "red" }}>R$ {product.price}</div>
-        <div>{product.title}</div>
-        <button onClick={handleClickAddCart} className={styles.comprar}>
-          Adicionar ao carrinho
-        </button>
-      </div>
+      <Link to={`/product/${product.id}`}>
+        <div className={styles.image}>
+          <img src={product.image} alt={product.title} />
+        </div>
+        <div className={styles.details}>
+          <div style={{ color: "red", fontSize: "1.5rem" }}>
+            R$ {product.price}
+          </div>
+          <div>{product.title}</div>
+        </div>
+      </Link>
+      <button onClick={handleClickAddCart} className={styles.comprar}>
+        Adicionar ao carrinho
+      </button>
     </div>
   );
 }
