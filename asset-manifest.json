@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/fake-store/static/css/main.ddbb16e7.css",
+    "main.js": "/fake-store/static/js/main.341a2e18.js",
+    "index.html": "/fake-store/index.html",
+    "static/media/cart-shopping-solid.svg": "/fake-store/static/media/cart-shopping-solid.b399be59b1eea4f51df21aab8bef7970.svg",
+    "main.ddbb16e7.css.map": "/fake-store/static/css/main.ddbb16e7.css.map",
+    "main.341a2e18.js.map": "/fake-store/static/js/main.341a2e18.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddbb16e7.css",
+    "static/js/main.341a2e18.js"
+  ]
+}
