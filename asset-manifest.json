@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/fake-store/static/css/main.a12707d2.css",
-    "main.js": "/fake-store/static/js/main.96008dd3.js",
+    "main.css": "/fake-store/static/css/main.213c7e73.css",
+    "main.js": "/fake-store/static/js/main.47a27ad4.js",
+    "static/media/github.svg": "/fake-store/static/media/github.171b179b9abcd796dce0204e58bb5c5f.svg",
     "index.html": "/fake-store/index.html",
+    "static/media/linkedin.svg": "/fake-store/static/media/linkedin.8259b0d9422b332cc396206603fef145.svg",
     "static/media/cart-shopping-solid.svg": "/fake-store/static/media/cart-shopping-solid.b399be59b1eea4f51df21aab8bef7970.svg",
-    "main.a12707d2.css.map": "/fake-store/static/css/main.a12707d2.css.map",
-    "main.96008dd3.js.map": "/fake-store/static/js/main.96008dd3.js.map"
+    "main.213c7e73.css.map": "/fake-store/static/css/main.213c7e73.css.map",
+    "main.47a27ad4.js.map": "/fake-store/static/js/main.47a27ad4.js.map"
   },
   "entrypoints": [
-    "static/css/main.a12707d2.css",
-    "static/js/main.96008dd3.js"
+    "static/css/main.213c7e73.css",
+    "static/js/main.47a27ad4.js"
   ]
 }
