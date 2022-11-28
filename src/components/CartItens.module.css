@@ -80,3 +80,24 @@
   height: 40px;
   margin-left: 50px;
 }
+
+@media (max-width: 800px) {
+  .total {
+    column-gap: 0px;
+    padding-left: 5px;
+  }
+  .total1 {
+    flex: 1;
+  }
+  .total2 {
+    flex: 1;
+  }
+  .total button {
+    margin-left: 0px;
+  }
+  .containerItem {
+    background-color: white;
+    z-index: 999;
+    /* ARRUMAR ISSO AQUI */
+  }
+}

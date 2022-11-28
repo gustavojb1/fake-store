@@ -37,4 +37,24 @@
 .productContainer {
   min-height: 90vh;
   flex: 2.8;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .flex {
+    display: block;
+  }
+  .search {
+    display: block;
+    width: 100vw;
+  }
+  .search button {
+    width: 50%;
+  }
+  .productContainer {
+    min-height: 90vh;
+    width: 100vw;
+    padding-left: 10px;
+  }
 }

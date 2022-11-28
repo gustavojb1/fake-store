@@ -5,4 +5,5 @@
   column-gap: 15px;
   row-gap: 15px;
   flex: 2.8;
+  justify-content: center;
 }

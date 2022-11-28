@@ -7,6 +7,7 @@ import ConfirmPurchase from "./components/ConfirmPurchase";
 import { UserStorage } from "./components/UserContext";
 import Login from "./components/Login";
 import ProductDetails from "./components/ProductDetails";
+import ProtectedRoute from "./components/Helper/ProtectedRoute";
 
 function App() {
   return (
@@ -16,7 +17,14 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="confirm" element={<ConfirmPurchase />} />
+            <Route
+              path="confirm/"
+              element={
+                <ProtectedRoute>
+                  <ConfirmPurchase />
+                </ProtectedRoute>
+              }
+            />
             <Route path="product/:id" element={<ProductDetails />} />
             <Route path="login" element={<Login />} />
           </Routes>

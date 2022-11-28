@@ -43,6 +43,7 @@ const Home = () => {
     <div className={`${styles.flex} container`}>
       <div className={styles.search}>
         <span>Pesquisar</span>
+        <br />
         <label>
           Nome do produto:
           <br />

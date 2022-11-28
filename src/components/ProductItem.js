@@ -32,15 +32,15 @@ function ProductItem({ product }) {
           <img src={product.image} alt={product.title} />
         </div>
         <div className={styles.details}>
-          <div style={{ color: "red", fontSize: "1.5rem" }}>
-            R$ {product.price}
-          </div>
-          <div>{product.title}</div>
+          <div className={styles.price}>R$ {product.price}</div>
+          <div className={styles.title}>{product.title}</div>
         </div>
       </Link>
-      <button onClick={handleClickAddCart} className={styles.comprar}>
-        Adicionar ao carrinho
-      </button>
+      <div className={styles.comprar1}>
+        <button onClick={handleClickAddCart} className={styles.comprar}>
+          Adicionar ao carrinho
+        </button>
+      </div>
     </div>
   );
 }

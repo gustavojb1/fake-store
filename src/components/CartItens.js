@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const CartItens = ({ onChangeHandleCart }) => {
   const { cartItem, setCartItem } = React.useContext(UserContext);
   const [total, setTotal] = React.useState("");
-  console.log(cartItem);
 
   useEffect(() => {
     let subTotal = 0;
@@ -52,8 +51,8 @@ const CartItens = ({ onChangeHandleCart }) => {
       )}
       {total > 0 ? (
         <div className={styles.total}>
-          <div>Preço total:</div>
-          <div>{`${total} R$`}</div>
+          <div className={styles.total1}>Preço total:</div>
+          <div className={styles.total2}>{`${total} R$`}</div>
           <Link to="/confirm">
             <button onClick={onChangeHandleCart}>Finalizar Compra</button>
           </Link>

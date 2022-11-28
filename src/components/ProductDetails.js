@@ -1,7 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { ITEM_GET } from "../api";
-import useFetch from "../Hooks/useFetch";
 import styles from "./ProductDetails.module.css";
 import axios from "axios";
 import { UserContext } from "./UserContext";

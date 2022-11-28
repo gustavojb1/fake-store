@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./ConfirmPurchase.module.css";
 import { UserContext } from "./UserContext";
 
 const ConfirmPurchase = () => {
-  const { cartItem } = React.useContext(UserContext);
-  console.log(cartItem);
+  const { cartItem, setCartItem } = React.useContext(UserContext);
+  const [total, setTotal] = React.useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    let subTotal = 0;
+    cartItem.forEach((element) => {
+      subTotal += element.price * element.qt;
+    });
+    setTotal(subTotal.toFixed(2));
+  }, [cartItem]);
 
   return (
     <div className={`${styles.confirm} container`}>
@@ -13,7 +23,7 @@ const ConfirmPurchase = () => {
       </div>
       <div className={styles.itens}>
         {cartItem.map((element) => (
-          <section className={styles.sectionItem}>
+          <section key={element.id} className={styles.sectionItem}>
             <div className={`${styles.titleItem} ${styles.flex}`}>
               {element.title}
             </div>
@@ -33,6 +43,18 @@ const ConfirmPurchase = () => {
             </div>
           </section>
         ))}
+      </div>
+      <div className={styles.totalGeral}>
+        <div>Total: {total}R$</div>
+        <button
+          onClick={() => {
+            alert("Parabens seu pedido foi efetuado");
+            setCartItem([]);
+            navigate("/");
+          }}
+        >
+          Confirmar Pedido
+        </button>
       </div>
     </div>
   );
