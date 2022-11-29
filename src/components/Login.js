@@ -2,6 +2,7 @@ import React from "react";
 import useForm from "../Hooks/useForm";
 import styles from "./Login.module.css";
 import { UserContext } from "./UserContext";
+import { ReactComponent as Shop } from "../assets/Person-Shopping-color.svg";
 
 const Login = () => {
   const username = useForm();
@@ -54,22 +55,7 @@ const Login = () => {
         </form>
       </div>
       <div className={styles.createUser}>
-        <form>
-          <h1 className={styles.title}>Criar Usuário</h1>
-          <label>
-            Username:
-            <br />
-            <input type="text" />
-          </label>
-          <br />
-          <label>
-            Password:
-            <br />
-            <input type="password" />
-          </label>
-          <br />
-          <button>Enviar</button>
-        </form>
+        <Shop className={styles.shop} />
       </div>
     </div>
   );
