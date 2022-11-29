@@ -47,7 +47,7 @@ function ProductItem({ product }) {
       </Link>
       <div className={styles.comprar1}>
         {disable ? (
-          <button disabled className={styles.comprar}>
+          <button disabled className={styles.comprado}>
             Item ja adicionado
           </button>
         ) : (

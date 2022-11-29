@@ -63,7 +63,9 @@ const ProductDetails = (props) => {
         </div>
         <div className={styles.price}>R$ {data.price}</div>
         <div className={styles.description}>{data.description}</div>
-        <button onClick={handleClickAddCart}>Adicionar ao carrinho</button>
+        <button onClick={handleClickAddCart} className={styles.comprar}>
+          Adicionar ao carrinho
+        </button>
       </div>
     );
 };
